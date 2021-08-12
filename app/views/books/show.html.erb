@@ -1,0 +1,23 @@
+<div class="show-box">
+ <div class="show-box-text">
+  <div class="show-edit-message">
+   <% if flash[:notice] %>
+    <p id="notice">
+     <%= flash[:notice] %>
+    </p>
+   <% end %>
+  </div>
+  
+  <h4 class="show-text">Title : <%= @book.title %></h4>
+  <h4 class="show-text">Body : <%= @book.body %></h4>
+ </div>
+  
+ <div class="show-action">
+  <%= link_to 'Edit', edit_book_path(@book) %>
+ </div>
+ <div class="partition">|</div>
+ <div class="show-action">
+  <%= link_to 'Back', books_path %>
+ </div>
+ 
+</div>
